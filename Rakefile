@@ -1,9 +1,6 @@
 require "rubygems"
 require "bundler/setup"
-
-def local_dir; './_site'; end
-
-Dir.glob('_tasks/*.rake').each { |r| load r}
+require "emblaze/tasks"
 
 desc "list tasks"
 task :list do

@@ -3,6 +3,8 @@ _site
 .jekyll-metadata
 .env
 
+vendor
+.asset-cache
 *.gem
 *.rbc
 /.config

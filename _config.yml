@@ -18,9 +18,8 @@
 title: 井戸端マザーハウス
 email: idobata.mother@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  井戸端マザーハウスはこういう感じです。
+  なんとか。
 baseurl: "" # the subpath of your site, e.g. /blog
 url:              http://site.idobata.house
 
@@ -29,21 +28,34 @@ twitter_username: KazueKaraduman
 
 
 # ----------- CONFIGURABLE START -----------
-signoff:          "kazue" # Your name
+signoff:            "kazue" # Your name
+signoff_message:    "また来てね！"
 # facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-56175514-6
 share:            true # Turn on twitter and facebook share buttons
 
 links:
-  - name:         Posts
+  - name:         報告
     url:          /
     external:     false
-  - name:         About me
-    url:          /about
+  - name:         ホーム
+    url:          /home.html
+    external:     false
+  - name:         ブログ
+    url:          http://idobata-mother.hatenablog.com/
+    external:     true
+  - name:         井戸端マザーハウスについて
+    url:          /about.html
+    external:     false
+  - name:         アクセス
+    url:          /access.html
+    external:     false
+  - name:         売店
+    url:          /shop.html
     external:     false
 # ------------ CONFIGURABLE END ------------
 
-permalink:        /posts/:title
+permalink:        /posts/:title.html
 defaults:
   - values:
       layout: "default"
@@ -55,6 +67,16 @@ markdown: kramdown
 theme: minima
 plugins_dir:
   - jekyll-feed
+  - jekyll-assets
+#  - jekyll-slim
+
+slim:
+  pretty: true
+  format: html5
+
+assets:
+  sources:
+    - _assets/images
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
